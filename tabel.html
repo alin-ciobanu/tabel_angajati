@@ -194,6 +194,23 @@
 					$('#Data-angajarii').val('');
 					$('#Pozitia-ocupata').val('');
 
+					$('#main-table tr:last td').click(function() {
+
+						$(this).html('');
+
+						var non_empty_cells_count = 0;
+
+						$(this).siblings().each(function() {
+							if($(this).html() !== '') {
+								non_empty_cells_count++;							
+							}					
+						});
+
+						if(non_empty_cells_count === 0) {
+							$(this).parent().remove();
+						}
+					});
+
 				});
 				
 				$('#main-table td').click(function() {
@@ -208,7 +225,7 @@
 						}					
 					});
 
-					if(non_empty_cells_count == 0) {
+					if(non_empty_cells_count === 0) {
 						$(this).parent().remove();
 					}
 				});
