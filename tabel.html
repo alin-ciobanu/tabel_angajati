@@ -7,60 +7,6 @@
 		</title>
 		
 		<link rel="stylesheet" href="tabel.css" />
-
-		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-		<script>
-
-			$(function() {
-
-				$('#click-pt-formular').click(function() {
-                                        $('.click-pt-formular').show();
-                                });
-
-				$('#formular').submit(function(e) {
-
-										e.preventDefault();
-
-	                                    var nume_cell = '<td>' + $('#Nume').val() + '</td>';
-                                        var prenume_cell = '<td>' + $('#Prenume').val() + '</td>';
-                                        var varsta_cell = '<td>' + $('#Varsta').val() + '</td>';
-                                        var depart_cell = '<td>' + $('#Departament').val() + '</td>';
-                                        var data_cell = '<td>' + $('#Data-angajarii').val() + '</td>';
-                                        var pozitia_cell = '<td>' + $('#Pozitia-ocupata').val() + '</td>';
-                                        var str = nume_cell + prenume_cell + varsta_cell + depart_cell + data_cell + pozitia_cell;
-
-                                        $('#main-table tr:last').after('<tr>' + str	+ '</tr>');
-
-                                        $('#Nume').val('');
-                                        $('#Prenume').val();
-                                        $('#Varsta').val('');
-                                        $('#Departament').val('');
-                                        $('#Data-angajarii').val('');
-                                        $('#Pozitia-ocupata').val('');
-
-                                });
-				
-				$('#main-table td').click(function() {
-
-					$(this).html('');
-
-					var non_empty_cells_count = 0;
-
-					$(this).siblings().each(function() {
-						if($(this).html() !== '') {
-							non_empty_cells_count++;							
-						}					
-					});
-
-					if(non_empty_cells_count == 0) {
-						$(this).parent().remove();
-					}
-				});
-
-			});
-
-		</script>
 	
 	</head>
 	
@@ -220,6 +166,60 @@
 				</tbody>
 			
 			</table>
+			
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+			<script>
+
+				$(function() {
+
+					$('#click-pt-formular').click(function() {
+											$('.click-pt-formular').show();
+									});
+
+					$('#formular').submit(function(e) {
+
+											e.preventDefault();
+
+											var nume_cell = '<td>' + $('#Nume').val() + '</td>';
+											var prenume_cell = '<td>' + $('#Prenume').val() + '</td>';
+											var varsta_cell = '<td>' + $('#Varsta').val() + '</td>';
+											var depart_cell = '<td>' + $('#Departament').val() + '</td>';
+											var data_cell = '<td>' + $('#Data-angajarii').val() + '</td>';
+											var pozitia_cell = '<td>' + $('#Pozitia-ocupata').val() + '</td>';
+											var str = nume_cell + prenume_cell + varsta_cell + depart_cell + data_cell + pozitia_cell;
+
+											$('#main-table tr:last').after('<tr>' + str	+ '</tr>');
+
+											$('#Nume').val('');
+											$('#Prenume').val();
+											$('#Varsta').val('');
+											$('#Departament').val('');
+											$('#Data-angajarii').val('');
+											$('#Pozitia-ocupata').val('');
+
+									});
+					
+					$('#main-table td').click(function() {
+
+						$(this).html('');
+
+						var non_empty_cells_count = 0;
+
+						$(this).siblings().each(function() {
+							if($(this).html() !== '') {
+								non_empty_cells_count++;							
+							}					
+						});
+
+						if(non_empty_cells_count == 0) {
+							$(this).parent().remove();
+						}
+					});
+
+				});
+
+			</script>
 		
 		</body>
 
