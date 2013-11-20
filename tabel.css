@@ -1,25 +1,25 @@
-			
-			#main-table {
-				border: 2.5px solid #124A3B;
-				background-color: #4D4D4D;
-				margin-left:auto; 
-				margin-right:auto;
-			}
 
-			#main-table thead {
-				background-color: #C9FFF9;
-				color: #4D3DFF;
-				font-weight: bold;
-				font-size: 1.2em;
-				border: 2px solid #110238;
-			}
+#main-table {
+	border: 2.5px solid #124A3B;
+	background-color: #4D4D4D;
+	margin-left:auto; 
+	margin-right:auto;
+}
 
-			#main-table thead tr td {
-				padding: 3px;
-			}
+#main-table thead {
+	background-color: #C9FFF9;
+	color: #4D3DFF;
+	font-weight: bold;
+	font-size: 1.2em;
+	border: 2px solid #110238;
+}
 
-			#main-table tbody tr td {
-				background-color: #C7C7C7;
-				text-align: center;
-				color: FF033D;
-			}
+#main-table thead tr td {
+	padding: 3px;
+}
+
+#main-table tbody tr td {
+	background-color: #C7C7C7;
+	text-align: center;
+	color: FF033D;
+}
